@@ -1,0 +1,8 @@
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/easy_handeye/cmake/easy_handeyeConfig-version.cmake
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/easy_handeye/cmake/easy_handeyeConfig.cmake
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/easy_handeye.pc
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/easy_handeye/calibrate.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/easy_handeye/publish.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/easy_handeye/robot.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/easy_handeye/handeye_calibration_commander.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/python3/dist-packages/easy_handeye/__init__.py

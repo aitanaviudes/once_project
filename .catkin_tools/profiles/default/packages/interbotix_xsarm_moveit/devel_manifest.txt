@@ -1,0 +1,4 @@
+interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_moveit
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_moveit/lib/pkgconfig/interbotix_xsarm_moveit.pc /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/interbotix_xsarm_moveit.pc
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_moveit/share/interbotix_xsarm_moveit/cmake/interbotix_xsarm_moveitConfig-version.cmake /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_moveit/cmake/interbotix_xsarm_moveitConfig-version.cmake
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_moveit/share/interbotix_xsarm_moveit/cmake/interbotix_xsarm_moveitConfig.cmake /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_moveit/cmake/interbotix_xsarm_moveitConfig.cmake

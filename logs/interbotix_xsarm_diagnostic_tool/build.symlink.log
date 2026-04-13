@@ -1,0 +1,6 @@
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/interbotix_xsarm_diagnostic_tool/xsarm_diagnostic_tool
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/interbotix_xsarm_diagnostic_tool/bag2csv.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/interbotix_xsarm_diagnostic_tool/xsarm_diagnostic_listener
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/interbotix_xsarm_diagnostic_tool.pc
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_diagnostic_tool/cmake/interbotix_xsarm_diagnostic_toolConfig.cmake
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_diagnostic_tool/cmake/interbotix_xsarm_diagnostic_toolConfig-version.cmake

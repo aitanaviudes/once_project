@@ -1,0 +1,8 @@
+build/
+devel/
+install/
+log/
+.catkin_workspace
+*__pycache__*
+*.pyc
+compile_commands.json

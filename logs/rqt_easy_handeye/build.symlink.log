@@ -1,0 +1,7 @@
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/python3/dist-packages/rqt_easy_handeye/__init__.py
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/rqt_easy_handeye/rqt_calibration_evaluator
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/rqt_easy_handeye/rqt_easy_handeye
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/rqt_easy_handeye/rqt_calibrationmovements
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/rqt_easy_handeye.pc
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/rqt_easy_handeye/cmake/rqt_easy_handeyeConfig-version.cmake
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/rqt_easy_handeye/cmake/rqt_easy_handeyeConfig.cmake

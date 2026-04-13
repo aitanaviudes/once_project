@@ -1,0 +1,26 @@
+<launch>
+  <node pkg="apriltag_ros" type="apriltag_ros_continuous_node" name="apriltag_node" clear_params="true" output="screen">
+    <remap from="image_rect" to="/camera/color/image_raw" />
+    <remap from="camera_info" to="/camera/color/camera_info" />
+    <param name="camera_frame" type="str" value="camera_color_optical_frame" />
+    <param name="publish_tag_detections_image" type="bool" value="true" />
+    
+    <param name="image_transport" type="str" value="raw" />
+    <param name="publish_tf" type="bool" value="true" />
+    
+    <rosparam command="load" file="$(find easy_handeye)/launch/tags.yaml"/>
+  </node>
+
+  <include file="$(find easy_handeye)/launch/calibrate.launch">
+    <arg name="eye_on_hand" value="true" />
+    <arg name="namespace_prefix" value="interbotix_calibration" />
+
+    <arg name="robot_base_frame" value="wx250s/base_link" />
+    <arg name="robot_effector_frame" value="wx250s/ee_arm_link" />
+
+    <arg name="tracking_base_frame" value="camera_color_optical_frame" />
+    <arg name="tracking_marker_frame" value="calibration_tag" />
+
+    <arg name="freehand_robot_movement" value="true" />
+  </include>
+</launch>

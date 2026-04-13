@@ -1,0 +1,4 @@
+interbotix_ros_manipulators/interbotix_ros_xsarms/interbotix_xsarm_perception
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_perception/lib/pkgconfig/interbotix_xsarm_perception.pc /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/interbotix_xsarm_perception.pc
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_perception/share/interbotix_xsarm_perception/cmake/interbotix_xsarm_perceptionConfig-version.cmake /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_perception/cmake/interbotix_xsarm_perceptionConfig-version.cmake
+/home/aitana_viudes/interbotix_ws/devel/.private/interbotix_xsarm_perception/share/interbotix_xsarm_perception/cmake/interbotix_xsarm_perceptionConfig.cmake /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_perception/cmake/interbotix_xsarm_perceptionConfig.cmake

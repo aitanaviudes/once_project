@@ -1,0 +1,4 @@
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/pkgconfig/interbotix_xsarm_pid.pc
+Symlinking /home/aitana_viudes/interbotix_ws/devel/lib/interbotix_xsarm_pid/xsarm_pid
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_pid/cmake/interbotix_xsarm_pidConfig-version.cmake
+Symlinking /home/aitana_viudes/interbotix_ws/devel/share/interbotix_xsarm_pid/cmake/interbotix_xsarm_pidConfig.cmake

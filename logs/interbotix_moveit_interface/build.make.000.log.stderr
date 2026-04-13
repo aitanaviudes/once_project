@@ -1,0 +1,9 @@
+[01m[K/home/aitana_viudes/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:[m[K In member function ‘[01m[Kbool InterbotixMoveItInterface::moveit_plan_cartesian_path(std::vector<geometry_msgs::Pose_<std::allocator<void> > >)[m[K’:
+[01m[K/home/aitana_viudes/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:108:101:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdouble moveit::planning_interface::MoveGroupInterface::computeCartesianPath(const std::vector<geometry_msgs::Pose_<std::allocator<void> > >&, double, double, moveit_msgs::RobotTrajectory&, bool, moveit_msgs::MoveItErrorCodes*)[m[K’ is deprecated: Drop jump_threshold [[01;35m[K-Wdeprecated-declarations[m[K]
+  108 |   double fraction = move_group->computeCartesianPath(waypoints, eef_step, jump_threshold, trajectory[01;35m[K)[m[K;
+      |                                                                                                     [01;35m[K^[m[K
+In file included from [01m[K/home/aitana_viudes/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/include/interbotix_moveit_interface/moveit_interface_obj.h:5[m[K,
+                 from [01m[K/home/aitana_viudes/interbotix_ws/src/interbotix_ros_toolboxes/interbotix_common_toolbox/interbotix_moveit_interface/src/moveit_interface_obj.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:783:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  783 |   [01;36m[KcomputeCartesianPath[m[K(const std::vector<geometry_msgs::Pose>& waypoints, double eef_step, double /*jump_threshold*/,
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
