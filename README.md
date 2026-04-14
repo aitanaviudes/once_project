@@ -168,4 +168,11 @@ Click Compute, then click Save. This saves the data to ~/.ros/easy_handeye/inter
 
 # TODO
 
-1. Fix the pointcloud issue, check if camera is correctly callibrated, check if this is the issue if not, research what else. 
+1. Fix the pointcloud issue, check if camera is correctly callibrated, check if this is the issue if not, research what else.
+
+# Checked...
+
+intrinsics matrices of demonstrations are the same:
+
+<img width="789" height="183" alt="image" src="https://github.com/user-attachments/assets/9f127af5-e14d-434f-8b0b-f1433b1514b2" />
+
