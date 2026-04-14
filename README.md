@@ -147,17 +147,25 @@ This way, once the updated `live_bottleneck_pose` and `end_effector_twists` have
 Now we can run the last script: `python3 call_replay_live_with_saved_data.py` which will basically load saved MT3 data and replay it using the DemoReplayer. This script loads the live_bottleneck_pose and end_effector_twists saved by deploy_mt3.py and passes them to the ROS replay system. 
 Make sure to execute this file with rviz simulator first (not real life) to see if the output of the mt3 pipeline looks correct and safe.
 
+## Camera Callibraion
+
+Run camera and robot roslaunchs as usual:
+
+Then run:
+`roslaunch easy_handeye calibrate_my_robot.launch`
+
+### The Physical Calibration
+Open a new terminal and run `rqt_image_view. Select the /tag_detections_image topic. You must see the orange "0" bounding box on your tag before taking any samples.
+
+Go to the `rqt_easy_handeye` GUI window.
+
+Use the RViz GUI to toggle motor torque OFF, physically move the arm around to take samples by clicking the 'Take Sample' button in the GUI.
+
+Repeat for at least 15 different angles (varying translation, tilt, and wrist rotation).
+
+Click Compute, then click Save. This saves the data to ~/.ros/easy_handeye/interbotix_calibration_eye_on_hand.yaml.
+
 
 # TODO
 
-1. Update segmentation mask pipeline.
-   What learning 1000 tasks do:
-For the first frame, they use LangSAM (Language Segment Anything Model) to generate workspace segmentation from language prompts like "grey shoe on table" README.md:179 . This creates the binary mask head_camera_ws_segmap.npy that identifies the target object. We should use the same approach as them and not hardcode a function for orange cubes as we are currently doing in `simple_orange_segmentation_with_depth`
-2. We should subsititue our inverse kinematics functions and use Moveit instead.
-
-
-
- I want you to read the files vis_velocity_commands.py, call_replay_live_with_saved_data.py, demo_collect_current_this.py and update_demo_sh. I want you to add code to
-  the file I just created (inference_pipeline.py) and what I want you to add is a script that as in demo_collect_current, gets the current images (rgb depth and
-  segmentation mask) from the current scene, passes this/updates to the directory /1000_tasks/learning_thousand_tasks/assets/inference_example and then uses the logic of
-  the file vis_velocity_commands.py to replay the trajectory
+1. Fix the pointcloud issue, check if camera is correctly callibrated, check if this is the issue if not, research what else. 
