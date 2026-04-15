@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s use_rviz:=false
+# roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s use_rviz:=true
 
 """
 Demonstration Collection Script v2 for Interbotix WX250S

@@ -44,11 +44,11 @@ class MoveGroupPythonInterfaceTutorial(object):
 
     def load_eef(self):
         #return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260407_212059/demo_0000/eef_poses.npy")
-        return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260413_202906/demo_0000/eef_poses.npy") 
+        return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260414_201103/demo_0000/eef_poses.npy") # 4x4 homogeneous transformation matrix of eef
 
     def load_twists(self):
         #return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260407_212059/demo_0000/demo_eef_twists.npy")
-        return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260413_202906/demo_0000/demo_eef_twists.npy")
+        return np.load("/home/aitana_viudes/interbotix_ws/src/interbotix_ros_manipulators/interbotix_ros_xsarms/examples/python_demos/collected_demos/session_20260414_201103/demo_0000/demo_eef_twists.npy") # Tx7 velocity commands of eef
 
     def mat_to_pose(self, T: np.ndarray) -> Pose:
         pose = Pose()
