@@ -68,9 +68,42 @@ class MoveGroupPythonInterfaceTutorial(object):
         self.gripper_group.go(wait=True)
         self.gripper_group.stop()
 
+    def open_gripper1(self):
+        print("============ Opening Gripper safely...")
+        
+        # Get current joint values
+        joint_goal = self.gripper_group.get_current_joint_values()
+        
+        # IMPORTANT: Tune this number!
+        # The absolute max limit in the URDF causes the motor to overload against the hard stop.
+        # Set this to a slightly smaller value so it opens wide enough to release the plate,
+        # but stops BEFORE it grinds against the physical limit.
+        # Try 0.030 or 0.035 and adjust as needed.
+        joint_goal[0] = 0.027 
+        
+        self.gripper_group.set_joint_value_target(joint_goal)
+        self.gripper_group.go(wait=True)
+        self.gripper_group.stop()
+
     def close_gripper(self):
         print("============ Closing Gripper...")
         self.gripper_group.set_named_target("Closed")
+        self.gripper_group.go(wait=True)
+        self.gripper_group.stop()
+
+    def close_gripper1(self):
+        print("============ Closing Gripper...")
+        
+        # Get current joint values (for the WX250s, this is usually one primary finger joint)
+        joint_goal = self.gripper_group.get_current_joint_values()
+        
+        # IMPORTANT: You will need to tune this number!
+        # Instead of fully closed (which is usually around 0.015 or 0.0 depending on the URDF),
+        # set it to a slightly wider position so it firmly grasps the cube without maxing out the motor.
+        # Try starting with 0.025 and adjust up or down until it holds the cube without overloading.
+        joint_goal[0] = 0.015 
+        
+        self.gripper_group.set_joint_value_target(joint_goal)
         self.gripper_group.go(wait=True)
         self.gripper_group.stop()
 

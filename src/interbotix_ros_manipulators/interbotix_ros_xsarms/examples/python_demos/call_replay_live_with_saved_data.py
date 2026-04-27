@@ -46,9 +46,14 @@ def replay_saved_trajectory(live_bottleneck_pose, end_effector_twists):
     mg.go_to_pose_goal(bottleneck_pose)
 
     print("=== PHASE 3: INTERACTION ===")
-    mg.execute_true_velocity_phase(twists)
+    mg.execute_true_velocity_phase(end_effector_twists)
     print("Trajectory execution complete.")    
 
+    print("=== PHASE 0: RESET TO HOME ===")
+    mg.move_group.set_named_target("Home")
+    mg.move_group.go(wait=True)
+    mg.move_group.stop()
+    
 def main():      
     """Load saved data and run replay."""      
     # REMOVE THIS LINE: rospy.init_node('mt3_replay_node')      

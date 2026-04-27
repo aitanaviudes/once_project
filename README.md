@@ -8,7 +8,7 @@ run in a terminal:
 
 in a second terminal:
 
-`roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s use_rviz:=false`
+`roslaunch interbotix_xsarm_control xsarm_control.launch robot_model:=wx250s use_rviz:=true`
 
 you can check the topics of both the arm and intelisense camera doing:
 
@@ -30,7 +30,9 @@ In another terminal, for simplicity, launch another rviz window: <br><br>
 <br>
 Connect the Camera to the Wrist running in another terminal:<br><br>
 
-`rosrun tf static_transform_publisher 0.05 0 0.04 0 0 0 wx250s/ee_arm_link camera_link 100` <br><br>
+`rosrun tf static_transform_publisher 0.05 0 0.04 0 0 0 wx250s/ee_arm_link camera_link 100` 
+`rosrun tf2_ros static_transform_publisher -0.007199 0.035990 0.057238 -0.489602 0.480778 -0.507338 0.521295 wx250s/ee_arm_link camera_color_optical_frame`
+<br><br>
 
 ## Scripts:
 
@@ -167,12 +169,32 @@ Click Compute, then click Save. This saves the data to ~/.ros/easy_handeye/inter
 
 
 # TODO
+ 
+1. Try tests with original camera extrinsics matrix:`T_WC_head.npy` and with the callibrated one: `T_WC_head.npy.callibrated`, these can be found in `/home/aitana_viudes/1000_tasks/learning_thousand_tasks/assets` - DONE
+2. Improve / check the depth functions: - DONE
+   `_to_uint16_depth_mm()` in: `depth_image = self._to_uint16_depth_mm(depth_image)`
+   and
+   `_refine_object_depth()` in: `depth_image = self._refine_object_depth(depth_image, segmap)`
+   
+3. Make tests of how real life displacements affect pointcloud. This can be done by recording demonstrations using the `demo_collect_current_try_2.py` script, then updating demo and inference example: (running `update_demo2.sh` with -s flag of one recorded demo and then `update_inference_only2.sh` with -s flag with another different recorded demo) See how the cube's positions differ. - DONE
+4. Try changing the value in `T_WE_copy[:3, 3] += T_WE_copy[:3, :3] @ np.array([0, 0, 0.11])`: - DONE
+   <img width="877" height="361" alt="image" src="https://github.com/user-attachments/assets/2fad3f1c-491f-4ea5-b79e-51f48898c1ed" />
+5. Record video with 1 demonstran and 2 inferences , show the fotos if MT3 - DONE
+6. Object orientation - Done
+7. Inference pipeline plug and play
+8. Put MT3 working docker in github
+9. improve segmentation, use langsam with necessary python version
+10. MT3 in GPU and see inference times in the end-to-end use case workflow
+11. Go down and adapt MT3 with Kinova arm to pick and place the plate
 
-1. Fix the pointcloud issue, check if camera is correctly callibrated, check if this is the issue if not, research what else.
+    -> record bottleneck pose a bit more above that current recordings to see if performance improves
 
 # Checked...
 
+- when same demo used for inference example and demo example and using callibrated matrix it works perfect
+- sometimes go to bottleneck pose breaks because it tries to take a path that would go through the table, this then leads to velocity commands starting at wrong position and everything breaks. But this is an easy fix (just make sure bottleneck pose is reached with a sensible path (not going under the table) and if not, plan it again).
 intrinsics matrices of demonstrations are the same:
 
 <img width="789" height="183" alt="image" src="https://github.com/user-attachments/assets/9f127af5-e14d-434f-8b0b-f1433b1514b2" />
+
 
