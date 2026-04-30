@@ -181,11 +181,17 @@ Click Compute, then click Save. This saves the data to ~/.ros/easy_handeye/inter
    <img width="877" height="361" alt="image" src="https://github.com/user-attachments/assets/2fad3f1c-491f-4ea5-b79e-51f48898c1ed" />
 5. Record video with 1 demonstran and 2 inferences , show the fotos if MT3 - DONE
 6. Object orientation - Done
-7. Inference pipeline plug and play
+7. Inference pipeline plug and play - DONE
 8. Put MT3 working docker in github
 9. improve segmentation, use langsam with necessary python version
 10. MT3 in GPU and see inference times in the end-to-end use case workflow
 11. Go down and adapt MT3 with Kinova arm to pick and place the plate
+
+
+interbotix:
+1. bottleneck pose in demos has to be recorded from different positions (a bit more above)
+2. test orientations generalisation (if doesn't work, record more than 1 per object)
+3. test camera, different positions
 
     -> record bottleneck pose a bit more above that current recordings to see if performance improves
 
